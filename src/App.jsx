@@ -380,33 +380,24 @@ function Projects() {
 }
 
 function Contact() {
-  
-const handleSubmit = (event) => {
-  event.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-  const subject = encodeURIComponent(
-    `Portfolio contact from ${name}`
-  );
-
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-  );
-
-  window.location.href =
-    `mailto:muqadasahmadzai2022@gmail.com?subject=${subject}&body=${body}`;
-};
-
+    const subject = encodeURIComponent(
+      `Portfolio contact from ${name}`
+    );
 
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     );
 
-    window.location.href = `mailto:YOUR_EMAIL@example.com?subject=${subject}&body=${body}`;
+    window.location.href =
+      `mailto:muqadasahmadzai2022@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
